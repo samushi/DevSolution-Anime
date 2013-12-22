@@ -15,15 +15,15 @@ In order for this to work you also need to include animate.css on your page.
 Here's an example of how you would use it for loading raw HTML:
 
 ```javascript
+<script>
 $(document).DevSolutionsAnime({
-		parent_class : '.animated-area',
+	parent_class : '.animated-area',
         child_class  : '.animated',
         anime_attr   : 'data-devanime',
         delay_attr   : 'data-devanime-delay'
 });
-```
-## HTML
-```
+</script>
+
 <div class="animated-area">
 	<div class="animated" data-devanime="fadeInLeftBig" data-devanime-delay="0.6s">
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
