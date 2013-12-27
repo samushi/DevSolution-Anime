@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Devsolution-anime by samushi</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Devsolution-anime</h1>
+          <h2>DevAnime is a jQuery plugin that scrolls content with css3 animation. You'll find all the documentation you need at [samimaxhuni.info](http://samimaxhuni.info).</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/samushi/DevSolution-Anime/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/samushi/DevSolution-Anime/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/samushi/DevSolution-Anime" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a name="jquery-devanime" class="anchor" href="#jquery-devanime"><span class="octicon octicon-link"></span></a>jQuery DevAnime</h1>
+
+<p>DevAnime is a jQuery plugin that scrolls content with css3 animation. You'll find all the documentation you need at <a href="http://samimaxhuni.info">samimaxhuni.info</a>.</p>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">DevSolutionAnime</span><span class="p">({</span>
+        <span class="nx">parent_class</span> <span class="o">:</span> <span class="s1">'.animated-area'</span><span class="p">,</span>
+        <span class="nx">child_class</span>  <span class="o">:</span> <span class="s1">'.animated'</span><span class="p">,</span>
+        <span class="nx">anime_attr</span>   <span class="o">:</span> <span class="s1">'data-devanime'</span><span class="p">,</span>
+        <span class="nx">delay_attr</span>   <span class="o">:</span> <span class="s1">'data-devanime-delay'</span>
+    <span class="p">});</span>
+</pre></div>
+
+<p>In order for this to work you also need to include animate.css on your page.</p>
+
+<p>Here's an example of how you would use it for loading raw HTML:</p>
+
+<div class="highlight highlight-javascript"><pre><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">DevSolutionsAnime</span><span class="p">({</span>
+    <span class="nx">parent_class</span> <span class="o">:</span> <span class="s1">'.animated-area'</span><span class="p">,</span>
+        <span class="nx">child_class</span>  <span class="o">:</span> <span class="s1">'.animated'</span><span class="p">,</span>
+        <span class="nx">anime_attr</span>   <span class="o">:</span> <span class="s1">'data-devanime'</span><span class="p">,</span>
+        <span class="nx">delay_attr</span>   <span class="o">:</span> <span class="s1">'data-devanime-delay'</span>
+<span class="p">});</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span>
+
+<span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"animated-area"</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"animated"</span> <span class="nx">data</span><span class="o">-</span><span class="nx">devanime</span><span class="o">=</span><span class="s2">"fadeInLeftBig"</span> <span class="nx">data</span><span class="o">-</span><span class="nx">devanime</span><span class="o">-</span><span class="nx">delay</span><span class="o">=</span><span class="s2">"0.6s"</span><span class="o">&gt;</span>
+        <span class="nx">Lorem</span> <span class="nx">ipsum</span> <span class="nx">dolor</span> <span class="nx">sit</span> <span class="nx">amet</span><span class="p">,</span> <span class="nx">consectetur</span> <span class="nx">adipisicing</span> <span class="nx">elit</span><span class="p">,</span> <span class="nx">sed</span> <span class="k">do</span> <span class="nx">eiusmod</span>
+        <span class="nx">tempor</span> <span class="nx">incididunt</span> <span class="nx">ut</span> <span class="nx">labore</span> <span class="nx">et</span> <span class="nx">dolore</span> <span class="nx">magna</span> <span class="nx">aliqua</span><span class="p">.</span> <span class="nx">Ut</span> <span class="nx">enim</span> <span class="nx">ad</span> <span class="nx">minim</span> <span class="nx">veniam</span><span class="p">,</span>
+        <span class="nx">quis</span> <span class="nx">nostrud</span> <span class="nx">exercitation</span> <span class="nx">ullamco</span> <span class="nx">laboris</span> <span class="nx">nisi</span> <span class="nx">ut</span> <span class="nx">aliquip</span> <span class="nx">ex</span> <span class="nx">ea</span> <span class="nx">commodo</span>
+        <span class="nx">consequat</span><span class="p">.</span> <span class="nx">Duis</span> <span class="nx">aute</span> <span class="nx">irure</span> <span class="nx">dolor</span> <span class="k">in</span> <span class="nx">reprehenderit</span> <span class="k">in</span> <span class="nx">voluptate</span> <span class="nx">velit</span> <span class="nx">esse</span>
+        <span class="nx">cillum</span> <span class="nx">dolore</span> <span class="nx">eu</span> <span class="nx">fugiat</span> <span class="nx">nulla</span> <span class="nx">pariatur</span><span class="p">.</span> <span class="nx">Excepteur</span> <span class="nx">sint</span> <span class="nx">occaecat</span> <span class="nx">cupidatat</span> <span class="nx">non</span>
+        <span class="nx">proident</span><span class="p">,</span> <span class="nx">sunt</span> <span class="k">in</span> <span class="nx">culpa</span> <span class="nx">qui</span> <span class="nx">officia</span> <span class="nx">deserunt</span> <span class="nx">mollit</span> <span class="nx">anim</span> <span class="nx">id</span> <span class="nx">est</span> <span class="nx">laborum</span><span class="p">.</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"animated"</span> <span class="nx">data</span><span class="o">-</span><span class="nx">devanime</span><span class="o">=</span><span class="s2">"fadeInRightBig"</span> <span class="nx">data</span><span class="o">-</span><span class="nx">devanime</span><span class="o">-</span><span class="nx">delay</span><span class="o">=</span><span class="s2">"0.6s"</span><span class="o">&gt;</span>
+        <span class="nx">Lorem</span> <span class="nx">ipsum</span> <span class="nx">dolor</span> <span class="nx">sit</span> <span class="nx">amet</span><span class="p">,</span> <span class="nx">consectetur</span> <span class="nx">adipisicing</span> <span class="nx">elit</span><span class="p">,</span> <span class="nx">sed</span> <span class="k">do</span> <span class="nx">eiusmod</span>
+        <span class="nx">tempor</span> <span class="nx">incididunt</span> <span class="nx">ut</span> <span class="nx">labore</span> <span class="nx">et</span> <span class="nx">dolore</span> <span class="nx">magna</span> <span class="nx">aliqua</span><span class="p">.</span> <span class="nx">Ut</span> <span class="nx">enim</span> <span class="nx">ad</span> <span class="nx">minim</span> <span class="nx">veniam</span><span class="p">,</span>
+        <span class="nx">quis</span> <span class="nx">nostrud</span> <span class="nx">exercitation</span> <span class="nx">ullamco</span> <span class="nx">laboris</span> <span class="nx">nisi</span> <span class="nx">ut</span> <span class="nx">aliquip</span> <span class="nx">ex</span> <span class="nx">ea</span> <span class="nx">commodo</span>
+        <span class="nx">consequat</span><span class="p">.</span> <span class="nx">Duis</span> <span class="nx">aute</span> <span class="nx">irure</span> <span class="nx">dolor</span> <span class="k">in</span> <span class="nx">reprehenderit</span> <span class="k">in</span> <span class="nx">voluptate</span> <span class="nx">velit</span> <span class="nx">esse</span>
+        <span class="nx">cillum</span> <span class="nx">dolore</span> <span class="nx">eu</span> <span class="nx">fugiat</span> <span class="nx">nulla</span> <span class="nx">pariatur</span><span class="p">.</span> <span class="nx">Excepteur</span> <span class="nx">sint</span> <span class="nx">occaecat</span> <span class="nx">cupidatat</span> <span class="nx">non</span>
+        <span class="nx">proident</span><span class="p">,</span> <span class="nx">sunt</span> <span class="k">in</span> <span class="nx">culpa</span> <span class="nx">qui</span> <span class="nx">officia</span> <span class="nx">deserunt</span> <span class="nx">mollit</span> <span class="nx">anim</span> <span class="nx">id</span> <span class="nx">est</span> <span class="nx">laborum</span><span class="p">.</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+
+<span class="o">&lt;</span><span class="err">/div&gt;</span>
+</pre></div>
+        </section>
+
+        <footer>
+          Devsolution-anime is maintained by <a href="https://github.com/samushi">samushi</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
