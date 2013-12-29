@@ -14,13 +14,16 @@ Version: 		1.0
             parent_class : '.animated-area',
             child_class  : '.animated',
             anime_attr   : 'data-devanime',
-            delay_attr   : 'data-devanime-delay'
+            delay_attr   : 'data-devanime-delay',
+            anime_hide   : false
         }, options);
 
 
 		this.each(function(){
         	var $this = this;
-
+		if(settings.anime_hide === true){
+			$(settings.child_class).hide();
+		}
 			$(window).scroll(function() {
 				$(settings.parent_class).each(function() {
 				    if($(window).height() + $(window).scrollTop() - $(this).offset().top > 0) {
