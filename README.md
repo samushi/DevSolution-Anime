@@ -7,7 +7,8 @@ $(document).ready(function () {
 		parent_class : '.animated-area',
         child_class  : '.animated',
         anime_attr   : 'data-devanime',
-        delay_attr   : 'data-devanime-delay'
+        delay_attr   : 'data-devanime-delay',
+        anime_hide   : false
 	});
 ```
 In order for this to work you also need to include animate.css on your page.
