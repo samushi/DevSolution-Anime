@@ -21,8 +21,11 @@ Version: 		1.0
 
 		this.each(function(){
         	var $this = this;
-		if(settings.anime_hide === true){
-			$(settings.child_class).hide();
+		
+		if(settings.anime_hide){
+			$(settings.parent_class).find(settings.child_class).each(function(){
+				$(this).find(".animated").css({'opacity' : 0});
+			});
 		}
 			$(window).scroll(function() {
 				$(settings.parent_class).each(function() {
